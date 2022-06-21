@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -9,23 +11,30 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;   
+    font-family: 'Poppins', sans-serif;
 }
 
 main{
-    width: 70%;
+    width: 85%;
     margin: 0 auto;
     display: flex;
+    padding: 40px;
     height: 100vh;
     justify-content: center;
     align-items: center;
     
 }
 
+
+
 @media (max-width: 375px){
     main{
+        padding: 0;
         text-align: center;
         align-items: center;
         flex-flow: wrap;
+        justify-content: center;
+        
     }
 }
 
@@ -39,10 +48,12 @@ main{
 }
 @media (max-width: 375px){
     .left_grid {
+        
         width: 100%;
         margin-top: 20px;
         padding-top: 50px;
-        padding: 10px;
+        padding: 20px;
+        margin-left: 10px;
 
     }
 }
@@ -50,27 +61,27 @@ main{
 
 .left_grid h2{
     font-weight: 900px;
-    font-family: poppins;
     margin-top: 20px;
     margin-bottom: 25px;
     padding: auto;
     font-size: 40px;
+    line-height: 45px;
 }
 
 @media (max-width: 375px){
 
     .left_grid h2{
         font-weight: 400px;
-        font-family: poppins;
         margin-top: 20px;
         margin-bottom: 25px;
         padding: auto;
-        font-size: 25px;
+        font-size: 30px;
     } 
 }
 
 .left_grid p{
-    font-size: 16px;
+    font-size: 15px;
+    opacity: 0.8;
 }
 
 .right_form{
@@ -82,6 +93,7 @@ main{
     .right_form{
         width: 100%;
         margin-top: 10px;
+        margin-left: 60px;
         padding-top: 50px;
         padding: 1px;
         align-items: center;
@@ -99,9 +111,9 @@ main{
     }
 }
 .try_it {
-    background-color: #5d54a3;
-    padding: 15px;
-    padding-left: 90px;
+    background-color: hsl(248, 32%, 49%);
+    padding: 20px;
+    text-align: center;
     border-radius: 10px;
     margin-left: 40px;
     width: 100%;
@@ -122,9 +134,10 @@ main{
     color: white;
 }
 
+
 .box_form{
     background-color: white;
-    padding: 25px;
+    padding: 15px 25px;
     width: 100%;
     margin: 40px;
     margin-top: 15px;
@@ -140,12 +153,62 @@ main{
         
     }
 }
+
+form div{
+    position: relative;
+    margin-bottom: 15px;
+}
+form div i{
+    
+    padding: 1px;
+    margin-top: -30px;
+    margin-right: -20px;
+    float: right;
+    
+}
+
+.error{
+    color: red;
+    float: right;
+    font-size: 10px;
+}
+
+.failure-icon,
+small {
+  color: red;
+}
+
+.success-icon {
+  color: green;
+}
+
+.success-icon,
+.failure-icon {
+  right: 0;
+  opacity: 0;
+  
+}
+
+small {
+  font-size: 14.5px;
+  margin-top: 5px;
+}
+
 .box_form input{
     width: 100%;
-    padding: 15px;
+    padding: 15px 25px;
     margin-top: 15px;
     border-radius: 5px;
-    border: 1px solid hsl(248, 32%, 49%);
+    font-weight: 500;
+    font-size: 15px;
+    border: 1px solid hsl(246, 25%, 77%);
+}
+
+.box_form input:focus {
+
+    border: 2px solid hsl(248, 32%, 49%);
+    outline: none;
+
 }
 
 @media (max-width: 375px){
@@ -154,18 +217,31 @@ main{
         padding: 13px;
     }
 }
+
 .box_form button{
     background-color: hsl(154, 59%, 51%);
     padding: 15px;
     width: 100%;
+    font-family: 'Poppins', sans-serif;
     margin: 1px;
     margin-top: 20px;
     color: rgb(17, 16, 16);
-    border: none;  
+    border: 1px solid hsl(154, 59%, 40%);  
+    box-shadow: 0 2px hsl(154, 59%, 40%);  
     border-radius: 5px; 
     color: white;
+    cursor: pointer;
+    letter-spacing: 2px;
 }
 
+button:focus{
+    outline: none;
+}
+
+button:active{
+    box-shadow: 0 2px hsl(154, 59%, 40%);  
+    transform: translateY(2px);
+}
 .box_form p{
     font-size: 10px;
     align-content: center;
@@ -174,6 +250,12 @@ main{
     color: hsl(246, 25%, 77%);
 }
 
+small{
+    display: block;
+    color: #aaa;
+    font-size: 11px;
+    font-weight: 500;
+}
 @media (max-width: 375px){
     .box_form p{
         font-size: 12px;

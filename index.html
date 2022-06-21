@@ -6,32 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cloudinary</title>
     <link rel="stylesheet" href="style.css">
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      crossorigin="anonymous"
+    />
+
 </head>
 <body>
-    <main>
-        <div class="left_grid">
-            <h2>
-                Learn to code by <br> watching others
-            </h2>
-            <p>
-                See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how 
-                developers think is invaluable.
-            </p>
-        </div>
-        <div class="right_form"> 
-            <p class="try_it"> <strong>Try it for free </strong> <a href=""> then $20/mo. thereafter</a></p>
-            <div class="box_form">
-                <form action="">
-                    <input type="text" placeholder="First Name"> <br>
-                    <input type="text" placeholder="Last Name"> <br>
-                    <input type="text" placeholder="Email Address"> <br>
-                    <input type="password" placeholder="Password"> <br>
-                </form>
-                <button>CLAIM YOUR FREE TRIAL</button>
-                <p>By clicking the button, you are agreeing to our <a href="">Terms and Services</a></p>
+        <main class="container">
+            <div class="left_grid">
+                <h2>
+                    <strong>Learn to code by <br> watching others</strong>
+                </h2>
+                <p>
+                    See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how 
+                    developers think is invaluable.
+                </p>
             </div>
-        </div>
-    </main>
+            <div class="right_form"> 
+                <p class="try_it"> <strong>Try it for free </strong> <a href=""> then $20/mo. thereafter</a></p>
+                <div class="box_form">
+                    <form action="" id="form">
+
+                        <div>
+                            <!-- input for first name -->
+                            <input type="text" name="firstname" placeholder="First Name" id="firstname"> <br>
+                            
+                            <i class="fas fa-exclamation-circle failure-icon"></i>
+                            <i class="far fa-check-circle success-icon"></i>
+                            <div class="error"></div>
+                        </div>
+
+                        <div>
+                            <!-- input for last name -->
+                            <input type="text" name="lastname" placeholder="Last Name" id="lastname"> <br>
+                            
+                            <i class="fas fa-exclamation-circle failure-icon"></i>
+                            <i class="far fa-check-circle success-icon"></i>
+                            <div class="error"></div>
+                        </div>
+
+                        <div>
+                            <!-- input for email -->
+                            <input type="text" name="emailadd" placeholder="Email Address" id="emailadd"> <br>
+                            
+                            <i class="fas fa-exclamation-circle failure-icon"></i>
+                            <i class="far fa-check-circle success-icon"></i>
+                            <div class="error"></div>
+
+                        </div>
+                        <div>
+                            <!-- input for password -->
+                            <input type="password" name="password" placeholder="Password" id="password"> <br>
+                            
+                            <i class="fas fa-exclamation-circle failure-icon"></i>
+                            <i class="far fa-check-circle success-icon"></i>
+                            <div class="error"></div>
+                        </div>
+                        <button id="submit" type="submit">CLAIM YOUR FREE TRIAL</button>
+                    </form>
+                    
+                    <p>By clicking the button, you are agreeing to our <a href="">Terms and Services</a></p>
+                </div>
+            </div>
+        </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
